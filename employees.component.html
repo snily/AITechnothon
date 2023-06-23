@@ -1,0 +1,42 @@
+<app-header></app-header>
+<main>
+    <div class="heading-second">  
+        <div class="block title block-1"><h3>Employee data</h3></div>
+        <div class="block block-2"><input type="button"  class="btn add-emp" value="Add New Employee" /></div>
+    </div> 
+    <table>
+        <thead>
+            <th class="fname">FIRST NAME</th>
+            <th class="lname">LAST NAME</th>
+            <th class="id">ID</th>
+            <th class="gender">GENDER</th>
+            <th class="grade">GRADE</th>
+            <th class="odc">ODC/NON ODC</th>
+            <th class="bu">BU</th>
+            <th class="prj">PROJECT</th>
+            <th class="action">ACTIONS</th>
+        </thead>
+        <tr *ngFor= "let emp of employeeList | paginate: { itemsPerPage: itemsPerPage, currentPage: p } " >
+            <td>{{ emp.first_name }}</td>
+            <td>{{ emp.last_name }}</td>
+            <td>{{ emp.emp_id }}</td>
+            <td>{{ emp.gender }}</td>
+            <td>{{ emp.grade }}</td>
+            <td>{{ emp.odc }}</td>
+            <td>{{ emp.bu }}</td>
+            <td>{{ emp.project }}</td>
+            <td><i class="fas fa-ellipsis-v"></i></td>            
+        </tr>
+        <tr>
+            <td colspan="3">Showing 
+                <select #selItems (change)="changeItemsPerPage(selItems.value)" >
+                    <option value="10">10</option>
+                    <option *ngFor = "let n of total_emp_arr " >{{ n }}</option>
+                </select> items of {{ total_emp }} </td> 
+            <td colspan="4"><pagination-controls (pageChange)="p = $event"></pagination-controls></td>
+            <td class="center" colspan="2">Go to page <input type="text" #page_num name="page_num" (keyup)="SetPageNumber(page_num.value)" /></td>
+        </tr>
+        
+    </table> 
+</main>
+<app-footer></app-footer>

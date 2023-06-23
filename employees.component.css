@@ -1,0 +1,86 @@
+.btn.add-emp{
+    width: 182px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+main{
+    margin: 0px 14px;
+    width: 98%;
+
+}
+.heading-second{
+    
+    padding-top: 30px;
+}
+.block-1{
+    margin-left: 10px;
+    width:84%
+}
+.block-2{
+    width:12%;
+    margin-right:10px;
+}
+.title h3{
+    font-weight: 500;
+}
+table{
+    width:94%;
+    margin-left:10px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+table th{
+    color:  #388cfa;
+}
+ table th{
+    padding: 6px 5px 6px 30px;
+}
+table td{
+    padding: 9px 5px 9px 30px;
+}
+tr{
+    background-color: #ffff;
+    height: 60px;
+    border-bottom: 0.5px solid #cccccc;
+}
+.fname{
+    width:12%;
+}
+.lname{
+    width:12%;
+}
+.id{
+    width:10%;
+}
+.gender{
+    width:10%;
+}
+.grade{
+    width:12%;
+}
+.odc{
+    width:12%;
+}
+.bu{
+    width:12%;
+}
+.prj{
+    width:12%;
+}
+.action{
+    width:12%;
+}
+input[type="text"] {
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    
+}
+td.center{
+    text-align: center;
+}
+select {
+    width: 45px;
+    height: 35px;
+}
